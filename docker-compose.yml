@@ -1,0 +1,14 @@
+# Use postgres/example user/password credentials
+version: '2.0'
+
+services:
+
+  db:
+    image: postgres
+    restart: always
+    environment:
+      POSTGRES_DATABASE: dbteste
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: 5233
+    ports:
+      - 8080:8080
