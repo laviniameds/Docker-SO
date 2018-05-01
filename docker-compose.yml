@@ -1,14 +1,10 @@
-# Use postgres/example user/password credentials
-version: '2.0'
-
+version: "2"
 services:
-
-  db:
-    image: postgres
-    restart: always
+  mariadb-dev:
+    image: mariadb
     environment:
-      POSTGRES_DATABASE: dbteste
-      POSTGRES_USER: postgres
-      POSTGRES_PASSWORD: 5233
+        MYSQL_ROOT_PASSWORD: 5233
+        MYSQL_DATABASE: dbteste
     ports:
-      - 8080:8080
+      - "3307:3306"
+
