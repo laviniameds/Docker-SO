@@ -37,9 +37,9 @@ public class ListarUsuarios extends HttpServlet {
             throws ServletException, IOException {
         
         UsuariosNegocio user = new UsuariosNegocio();
-        ArrayList<Usuario> lista =  user.getUsuarios();
+        ArrayList<Usuario> lista = user.getUsuarios();
         
-        request.setAttribute("usuarios", lista);
+        getServletContext().setAttribute("users", lista);
         getServletContext().getRequestDispatcher("/index.jsp").forward(request, response);
         
     }

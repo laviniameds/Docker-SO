@@ -16,6 +16,12 @@ public class Usuario {
     private String nome;
     private String email;
 
+    public Usuario(String foto, String nome, String email) {
+        this.foto = foto;
+        this.nome = nome;
+        this.email = email;
+    }
+
     public String getFoto() {
         return foto;
     }

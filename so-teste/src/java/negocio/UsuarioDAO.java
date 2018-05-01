@@ -27,18 +27,14 @@ public class UsuarioDAO {
         Connection conn = Banco.getConnection();
         ResultSet rs = null;
         Statement st = null;
-        ArrayList<Usuario> lista = null;
-        String sql = "SELECT * FROM usuario";
+        ArrayList<Usuario> lista = new ArrayList<>();
+        String sql = "SELECT * FROM dbteste.usuario";
         try {
             st = conn.createStatement();
             rs = st.executeQuery(sql);
 
             if(rs.next()){
-                Usuario u = new Usuario();
-                
-                u.setNome(rs.getString("nome"));
-                u.setFoto(rs.getString("foto"));
-                u.setEmail(rs.getString("email"));
+                Usuario u = new Usuario(rs.getString("foto"), rs.getString("nome"), rs.getString("email"));
                 
                 lista.add(u);
             }

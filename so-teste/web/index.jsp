@@ -23,7 +23,7 @@
                 </tr>
             </thead>
             <tbody>
-                <c:forEach var="c" items="${applicationScope.usuarios}">
+                <c:forEach var="c" items="${applicationScope.users}">
                     <tr>
                         <td><c:out value="${c.foto}"/></td>
                         <td><c:out value="${c.nome}"/></td>
